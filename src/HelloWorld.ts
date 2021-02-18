@@ -1,6 +1,8 @@
+import * as _ from 'lodash';
 class Startup {
 	public static main(): number {
-		console.log('Hello World');
+		const group = _.groupBy(['one', 'two', 'three'], 'length');
+		console.log(group); // => { '3': ['one', 'two'], '5': ['three'] }
 		return 0;
 	}
 }
